@@ -69,7 +69,7 @@ export default function Home() {
 								p={16}
 							>
 								<Image
-									src="/ship1.png"
+									src="/Ship1.jpg"
 									w={"500px"}
 									h={"500px"}
 									borderRadius={30}
