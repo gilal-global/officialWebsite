@@ -42,12 +42,14 @@ export default function LandingHeroSection() {
 							letterSpacing="tight"
 							my={12}
 							fontFamily="var(--font-noto-sans-tc)"
+							userSelect={"none"}
 						>
 							供應到人才:全面進化的顧問夥伴
 						</Heading>
 						<Text
 							fontSize="2xl"
 							fontFamily="var(--font-noto-serif-tc)"
+							userSelect={"none"}
 						>
 							我們整合供應鏈與人力資源兩大核心，提供一站式專業顧問服務，協助企業提升效率、強化競爭力，實現全面升級。
 						</Text>

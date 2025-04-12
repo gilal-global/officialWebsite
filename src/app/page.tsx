@@ -73,6 +73,7 @@ export default function Home() {
 									w={"500px"}
 									h={"500px"}
 									borderRadius={30}
+									draggable="false"
 								></Image>
 								<Flex
 									direction={"column"}
@@ -122,6 +123,7 @@ export default function Home() {
 									w={"500px"}
 									h={"500px"}
 									borderRadius={30}
+									draggable="false"
 								></Image>
 							</Box>
 							<Box
@@ -138,6 +140,7 @@ export default function Home() {
 									w={"500px"}
 									h={"600px"}
 									borderRadius={30}
+									draggable="false"
 								></Image>
 								<Flex
 									direction={"column"}
