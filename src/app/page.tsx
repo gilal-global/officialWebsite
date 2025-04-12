@@ -1,101 +1,184 @@
-import Image from "next/image";
+import LandingHeroSection from "@/components/heroSection/landingHeroSection"
+import { CardBox } from "@/components/maincontent/cardbox"
+import ContainerSection from "@/components/maincontent/containerSection"
+import { FullWidthSection } from "@/components/maincontent/fullWidthSection"
+import {
+	Box,
+	Flex,
+	Icon,
+	Image,
+	VStack,
+	Text,
+	StackSeparator,
+} from "@chakra-ui/react"
+import { wrap } from "module"
+
+const cardData = [
+	{
+		title: "初創公司",
+		description:
+			"加速供應鏈啟動，解決兼顧團隊效率與成本的痛點，節省時間與成本。",
+		bgColor: "purple.200",
+		icon: "/work-from-home.png",
+	},
+	{
+		title: "中小企業",
+		description:
+			"外部資源不足？我們協助媒合可靠供應商與物流夥伴，滿足外包需求。",
+		bgColor: "green.200",
+		icon: "/office.png",
+	},
+	{
+		title: "國際公司",
+		description:
+			"協助快速進入亞洲市場，降低文化與語言障礙風險，優化在地佈局。",
+		bgColor: "blue.200",
+		icon: "/partnership.png",
+	},
+]
 
 export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+	return (
+		<>
+			<Box maxW={"100%"} mx={"auto"} w={"100%"} background={"#0D1117"}>
+				<LandingHeroSection></LandingHeroSection>
+				<FullWidthSection>
+					<Box w={"100%"} background={"#1E2632D9"}>
+						<Flex
+							gap={"10vw"}
+							justify={"center"}
+							wrap={"wrap"}
+							py={12}
+						>
+							{cardData.map((card, index) => (
+								<CardBox key={index} {...card}>
+									{card.description}
+								</CardBox>
+							))}
+						</Flex>
+					</Box>
+				</FullWidthSection>
+				<ContainerSection>
+					<Box px={{ base: 4, md: 8 }} py={16}>
+						<VStack gap={20} separator={<StackSeparator />}>
+							<Box
+								w={"100%"}
+								minH={"300px"}
+								display={"flex"}
+								gap={"84px"}
+								p={16}
+							>
+								<Image
+									src="/ship1.png"
+									w={"500px"}
+									h={"500px"}
+									borderRadius={30}
+								></Image>
+								<Flex
+									direction={"column"}
+									gap={"24px"}
+									flex={1}
+									justifyContent={"center"}
+								>
+									<Text
+										fontSize={"3xl"}
+										p={6}
+										fontFamily={"var(--font-noto-serif-tc)"}
+									>
+										使命：以專業的供應鏈管理解決方案，幫助客戶快速啟動並優化運營，實現高效交付與成本控制。
+									</Text>
+									<Text
+										fontSize={"3xl"}
+										p={6}
+										fontFamily={"var(--font-noto-serif-tc)"}
+									>
+										願景：成為國際市場領先的供應鏈管理與項目協調服務品牌，特別是在亞洲市場建立卓越聲譽。
+									</Text>
+								</Flex>
+							</Box>
+							<Box
+								w={"100%"}
+								minH={"300px"}
+								display={"flex"}
+								gap={"84px"}
+								p={16}
+							>
+								<Flex
+									direction={"column"}
+									gap={"24px"}
+									flex={1}
+									justifyContent={"center"}
+								>
+									<Text
+										fontSize={"3xl"}
+										p={6}
+										fontFamily={"var(--font-noto-serif-tc)"}
+									>
+										協助客戶篩選可靠供應商並建立多樣化網絡以降低風險，通過談判策略和公平合同爭取最佳條件並簡化管理，從訂單到交付全程跟踪進度並解決問題以確保按時完成，同時提供質量檢測、物流管理和售後支持等增值服務提升滿意度。{" "}
+									</Text>
+								</Flex>
+								<Image
+									src="/light-trails-buildings.jpg"
+									w={"500px"}
+									h={"500px"}
+									borderRadius={30}
+								></Image>
+							</Box>
+							<Box
+								w={"100%"}
+								minH={"300px"}
+								display={"flex"}
+								gap={"84px"}
+								p={16}
+							>
+								<Image
+									src="/landcard3.jpeg"
+									backgroundSize={"cover"}
+									backgroundPosition={"center"}
+									w={"500px"}
+									h={"600px"}
+									borderRadius={30}
+								></Image>
+								<Flex
+									direction={"column"}
+									gap={"24px"}
+									flex={1}
+									justifyContent={"center"}
+								>
+									<Text
+										fontSize={"3xl"}
+										p={6}
+										fontFamily={"var(--font-noto-serif-tc)"}
+									>
+										1.雙語與跨文化支持：幫助國際企業克服語言及文化障礙
+									</Text>
+									<Text
+										fontSize={"3xl"}
+										p={6}
+										fontFamily={"var(--font-noto-serif-tc)"}
+									>
+										2.高性價比的定制化服務：適合中小企業與初創公司，靈活滿足客戶需求
+									</Text>
+									<Text
+										fontSize={"3xl"}
+										p={6}
+										fontFamily={"var(--font-noto-serif-tc)"}
+									>
+										3.增值服務全面：涵蓋質檢、物流協調、售後支持，提供全流程解決方案
+									</Text>
+									<Text
+										fontSize={"3xl"}
+										p={6}
+										fontFamily={"var(--font-noto-serif-tc)"}
+									>
+										4.專注亞洲市場：為希望進入中國、越南等亞洲市場的企業提供深入支持
+									</Text>
+								</Flex>
+							</Box>
+						</VStack>
+					</Box>
+				</ContainerSection>
+			</Box>
+		</>
+	)
 }
