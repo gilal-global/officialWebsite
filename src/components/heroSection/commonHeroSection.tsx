@@ -38,11 +38,11 @@ export default ({ Title, SubTitle }: CommonHeroSectionProps) => (
 					direction="column"
 					gap={16}
 					w={{ base: "100%", md: "100%" }}
-					px={{ base: "160px", md: "320px" }}
+					px={{ base: "160px", md: "160px" }}
 				>
 					<Box
 						maxW={{ base: "100%", xl: "1280px", "2xl": "1280px" }}
-						mx={{ base: "0", xl: "0", "2xl": "auto" }}
+						mx={{ base: "0", xl: "auto", "2xl": "auto" }}
 					>
 						<Heading
 							fontSize="5xl"
@@ -50,6 +50,7 @@ export default ({ Title, SubTitle }: CommonHeroSectionProps) => (
 							letterSpacing="tight"
 							my={12}
 							fontFamily="var(--font-noto-sans-tc)"
+							userSelect={"none"}
 						>
 							{Title}
 						</Heading>
@@ -63,6 +64,7 @@ export default ({ Title, SubTitle }: CommonHeroSectionProps) => (
 							fontSize="2xl"
 							fontFamily="var(--font-noto-serif-tc)"
 							textAlign={"center"}
+							userSelect={"none"}
 						>
 							{SubTitle}
 						</Text>

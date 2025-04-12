@@ -39,6 +39,7 @@ export const CardBox = ({
 					color={"black"}
 					fontWeight={"800"}
 					fontFamily="var(--font-noto-sans-tc)"
+					userSelect={"none"}
 				>
 					{title}
 				</Heading>
@@ -49,6 +50,7 @@ export const CardBox = ({
 				color={"black"}
 				textAlign={"justify"}
 				fontFamily="var(--font-noto-serif-tc)"
+				userSelect={"none"}
 			>
 				{children}
 			</Text>

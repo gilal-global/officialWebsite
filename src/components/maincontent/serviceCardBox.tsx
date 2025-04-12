@@ -22,14 +22,19 @@ export const ServiceCard = ({
 		direction="column"
 		align="center"
 	>
-		<Center p="12px">
+		<Center p="12px" m={"12px"}>
 			<Center w="150px" h="150px" bgColor={color} borderRadius="full">
-				<Image src={image} w="108px" h="108px" />
+				<Image
+					src={image}
+					w="108px"
+					h="108px"
+					userSelect={"none"}
+					draggable="false"
+				/>
 			</Center>
 		</Center>
 		<Box my="12px">
 			<Text fontSize="3xl" fontFamily="var(--font-noto-sans-tc)">
-				{" "}
 				{title}
 			</Text>
 		</Box>
