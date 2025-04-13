@@ -1,8 +1,19 @@
+"use client"
 import NextLink from "next/link"
-import { Box, Flex, Link } from "@chakra-ui/react"
-import { ColorModeButton } from "../ui/color-mode"
+import { Box, Flex, Link, Image } from "@chakra-ui/react"
+import { ColorModeButton, useColorModeValue } from "@/components/ui/color-mode"
+import { useEffect, useState } from "react"
 
 export default function NavBar() {
+	const [mounted, setMounted] = useState(false)
+
+	useEffect(() => {
+		setMounted(true)
+	}, [])
+
+	const logoBgImage = useColorModeValue("/LogoNoBg.png", "/LogoBlackNoBg.png")
+
+	if (!mounted) return null // ❗ 等待 client-side render，再載入圖片
 	return (
 		<Box width={"100%"} bg={"bg.nav"} h={"6rem"}>
 			<Flex gap={"4"} h={"100%"}>
@@ -14,7 +25,19 @@ export default function NavBar() {
 					fontSize={"4xl"}
 					fontFamily="var(--font-noto-sans-tc)"
 				>
-					<Link href="/" title="回首頁" as={NextLink}>
+					<Image
+						src={logoBgImage}
+						alt="logo"
+						w={"100px"}
+						h={"100px"}
+						mr={"1rem"}
+					/>
+					<Link
+						href="/"
+						title="回首頁"
+						as={NextLink}
+						fontFamily={"var(--font-noto-sans-tc)"}
+					>
 						堅美國際
 					</Link>
 				</Box>
