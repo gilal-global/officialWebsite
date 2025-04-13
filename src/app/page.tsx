@@ -40,10 +40,10 @@ const cardData = [
 export default function Home() {
 	return (
 		<>
-			<Box maxW={"100%"} mx={"auto"} w={"100%"} background={"#0D1117"}>
+			<Box maxW={"100%"} mx={"auto"} w={"100%"}>
 				<LandingHeroSection></LandingHeroSection>
 				<FullWidthSection>
-					<Box w={"100%"} background={"#1E2632D9"}>
+					<Box w={"100%"} bg={"bg.card"}>
 						<Flex
 							gap={"10vw"}
 							justify={"center"}
@@ -60,7 +60,14 @@ export default function Home() {
 				</FullWidthSection>
 				<ContainerSection>
 					<Box px={{ base: 4, md: 8 }} py={16}>
-						<VStack gap={20} separator={<StackSeparator />}>
+						<VStack
+							gap={20}
+							separator={
+								<StackSeparator
+									borderColor={"border.divider"}
+								/>
+							}
+						>
 							<Box
 								w={"100%"}
 								minH={"300px"}

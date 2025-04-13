@@ -3,7 +3,7 @@ import { Box, Flex } from "@chakra-ui/react"
 export default function Footer() {
 	return (
 		<Box
-			background={"#0E1628"}
+			bg={"bg.footer"}
 			h={"4rem"}
 			display={"flex"}
 			justifyContent={"center"}
