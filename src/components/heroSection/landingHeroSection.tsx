@@ -23,7 +23,7 @@ export default function LandingHeroSection() {
 					inset={0}
 					bg=""
 					_dark={{
-						bg: "rgba(0, 0, 0, 0.6)",
+						bg: "rgba(0, 0, 0, 0.5)",
 					}}
 					zIndex={1}
 				/>

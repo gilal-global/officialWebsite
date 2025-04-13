@@ -6,6 +6,7 @@ import { Noto_Sans_TC, Noto_Serif_TC } from "next/font/google"
 import "./globals.css"
 import Footer from "@/components/footer"
 import { Box } from "@chakra-ui/react"
+import { ColorModeProvider } from "@/components/ui/color-mode"
 
 const notoSans = Noto_Sans_TC({
 	subsets: ["latin"],
