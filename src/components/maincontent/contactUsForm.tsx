@@ -32,8 +32,9 @@ const contactUsForm = () => {
 			as={"form"}
 			onSubmit={handleSubmit}
 			minH={"300px"}
-			border={"3px solid #3C3AB4"}
-			bgColor={"#18202C"}
+			border={"3px solid #E2DED6"}
+			bg={"#F4F1EA"}
+			_dark={{ bg: "#18202C", border: "3px solid #3C3AB4" }}
 			maxW={"2xl"}
 			w={"100%"}
 			mx={"auto"}
@@ -54,9 +55,13 @@ const contactUsForm = () => {
 								px={4}
 								placeholder="First Name"
 								variant="outline"
-								border="2px solid"
-								borderColor="whiteAlpha.200"
-								bg="whiteAlpha.100"
+								borderBottom={"2px solid"}
+								borderColor="gray.400"
+								_dark={{
+									borderColor: "whiteAlpha.200",
+									bg: "whiteAlpha.100",
+								}}
+								bg="gray.50"
 							/>
 						</Field.Root>
 
@@ -70,9 +75,13 @@ const contactUsForm = () => {
 								px={4}
 								placeholder="Last Name"
 								variant="outline"
-								border="2px solid"
-								borderColor="whiteAlpha.200"
-								bg="whiteAlpha.100"
+								borderBottom={"2px solid"}
+								borderColor="gray.400"
+								_dark={{
+									borderColor: "whiteAlpha.200",
+									bg: "whiteAlpha.100",
+								}}
+								bg="gray.50"
 							/>
 						</Field.Root>
 					</HStack>
@@ -87,9 +96,13 @@ const contactUsForm = () => {
 								px={4}
 								placeholder="Email"
 								variant="outline"
-								border="2px solid"
-								borderColor="whiteAlpha.200"
-								bg="whiteAlpha.100"
+								borderBottom={"2px solid"}
+								borderColor="gray.400"
+								_dark={{
+									borderColor: "whiteAlpha.200",
+									bg: "whiteAlpha.100",
+								}}
+								bg="gray.50"
 							/>
 						</Field.Root>
 
@@ -100,18 +113,23 @@ const contactUsForm = () => {
 
 							<NativeSelect.Root
 								w="100%"
-								bg="whiteAlpha.100"
-								border="2px solid"
-								borderColor="whiteAlpha.200"
+								borderBottom={"2px solid"}
+								borderColor="gray.400"
+								_dark={{
+									borderColor: "whiteAlpha.200",
+									bg: "whiteAlpha.100",
+								}}
+								bg="gray.50"
 								borderRadius="md"
 							>
 								<NativeSelect.Field
 									px={4}
 									fontSize="md"
-									color="white"
+									color={"black.400"}
 									_focus={{
 										outline: "none",
 										borderColor: "blue.300",
+										color: "whiteAlpha.900",
 									}}
 								>
 									{COUNTRIES.map((country) => (
@@ -139,9 +157,13 @@ const contactUsForm = () => {
 								px={4}
 								placeholder="Subject"
 								variant="outline"
-								border="2px solid"
-								borderColor="whiteAlpha.200"
-								bg="whiteAlpha.100"
+								borderBottom={"2px solid"}
+								borderColor="gray.400"
+								_dark={{
+									borderColor: "whiteAlpha.200",
+									bg: "whiteAlpha.100",
+								}}
+								bg="gray.50"
 							/>
 						</Field.Root>
 						<Field.Root></Field.Root>
@@ -158,20 +180,38 @@ const contactUsForm = () => {
 								px={4}
 								placeholder="Details"
 								variant="outline"
-								border="2px solid"
-								borderColor="whiteAlpha.200"
-								bg="whiteAlpha.100"
+								borderBottom={"2px solid"}
+								borderColor="gray.400"
+								_dark={{
+									borderColor: "whiteAlpha.200",
+									bg: "whiteAlpha.100",
+								}}
+								bg="gray.50"
 								minH={"200px"}
 							/>
 						</Field.Root>
 					</HStack>
 					<HStack justify={"center"} mt={4}>
 						<Button
-							bg={"#3C3AB4"}
-							border={"2px solid #3C3AB4"}
+							bg={"blue.400"}
+							border={"2px solid blue.400"}
+							_dark={{
+								bg: "#3C3AB4",
+								borderColor: "#3C3AB4",
+								_hover: {
+									bg: "#3432a1",
+									transform: "scale(1.05)",
+								},
+							}}
 							fontSize={"2xl"}
 							size={"lg"}
 							p={4}
+							_hover={{
+								bg: "blue.500",
+								transform: "scale(1.05)",
+							}}
+							boxShadow="md"
+							minW={"100px"}
 						>
 							送出
 						</Button>

@@ -6,7 +6,7 @@ type CommonHeroSectionProps = {
 }
 
 export default ({ Title, SubTitle }: CommonHeroSectionProps) => (
-	<Box position="relative" w="100%" minH="500px" bgColor="#060a0e">
+	<Box position="relative" w="100%" minH="500px">
 		{/* 內容容器：控制寬度 */}
 		<Box
 			w="100%"
@@ -21,7 +21,10 @@ export default ({ Title, SubTitle }: CommonHeroSectionProps) => (
 			<Box
 				position="absolute"
 				inset={0}
-				bg="rgba(0, 0, 0, 0.6)"
+				_dark={{
+					bg: "rgba(0, 0, 0, 0.6)",
+				}}
+				bg="rgba(255,255,255,0.6)"
 				zIndex={1}
 			/>
 
@@ -51,6 +54,7 @@ export default ({ Title, SubTitle }: CommonHeroSectionProps) => (
 							my={12}
 							fontFamily="var(--font-noto-sans-tc)"
 							userSelect={"none"}
+							textShadow="0px 0px 10px rgba(0, 0, 0, 0.5)"
 						>
 							{Title}
 						</Heading>
@@ -65,6 +69,7 @@ export default ({ Title, SubTitle }: CommonHeroSectionProps) => (
 							fontFamily="var(--font-noto-serif-tc)"
 							textAlign={"center"}
 							userSelect={"none"}
+							textShadow="0px 0px 10px rgba(0, 0, 0, 0.5)"
 						>
 							{SubTitle}
 						</Text>

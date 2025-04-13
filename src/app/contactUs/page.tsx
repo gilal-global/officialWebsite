@@ -7,7 +7,7 @@ import React from "react"
 
 const contactUs = () => {
 	return (
-		<Box maxW={"100%"} mx={"auto"} w={"100%"} background={"#0D1117"}>
+		<Box maxW={"100%"} mx={"auto"} w={"100%"}>
 			<FullWidthSection>
 				<CommonHeroSection
 					Title="精準支援每一個商業階段"

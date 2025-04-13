@@ -1,9 +1,10 @@
 import NextLink from "next/link"
 import { Box, Flex, Link } from "@chakra-ui/react"
+import { ColorModeButton } from "../ui/color-mode"
 
 export default function NavBar() {
 	return (
-		<Box width={"100%"} background={"#0E1628"} h={"6rem"}>
+		<Box width={"100%"} bg={"bg.nav"} h={"6rem"}>
 			<Flex gap={"4"} h={"100%"}>
 				<Box
 					display={"flex"}
@@ -30,8 +31,14 @@ export default function NavBar() {
 					<Link
 						as={NextLink}
 						transition={"all 0.3s ease-in-out"}
+						_dark={{
+							_hover: {
+								color: "yellow.200",
+								transform: "translateY(-5px)",
+							},
+						}}
 						_hover={{
-							color: "yellow.200",
+							color: "#5B8EAE",
 							transform: "translateY(-5px)",
 						}}
 						href="/company"
@@ -41,8 +48,14 @@ export default function NavBar() {
 					<Link
 						as={NextLink}
 						transition={"all 0.3s ease-in-out"}
+						_dark={{
+							_hover: {
+								color: "yellow.200",
+								transform: "translateY(-5px)",
+							},
+						}}
 						_hover={{
-							color: "yellow.200",
+							color: "#5B8EAE",
 							transform: "translateY(-5px)",
 						}}
 						href="/services"
@@ -52,14 +65,22 @@ export default function NavBar() {
 					<Link
 						as={NextLink}
 						transition={"all 0.3s ease-in-out"}
+						_dark={{
+							_hover: {
+								color: "yellow.200",
+								transform: "translateY(-5px)",
+							},
+						}}
 						_hover={{
-							color: "yellow.200",
+							color: "#5B8EAE",
 							transform: "translateY(-5px)",
 						}}
 						href="/contactUs"
 					>
 						聯絡我們
 					</Link>
+
+					<ColorModeButton></ColorModeButton>
 				</Flex>
 			</Flex>
 		</Box>

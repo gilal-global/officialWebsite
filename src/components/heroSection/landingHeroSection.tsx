@@ -2,14 +2,17 @@ import { Box, Button, Flex, Heading, Image, Text } from "@chakra-ui/react"
 import NextLink from "next/link"
 export default function LandingHeroSection() {
 	return (
-		<Box position="relative" w="100%" minH="600px" bgColor="#060a0e">
+		<Box position="relative" w="100%" minH="600px" bg={"bg.hero"}>
 			{/* 內容容器：控制寬度 */}
 			<Box
 				w="100%"
 				maxW="1440px"
 				mx="auto"
 				position="relative"
-				bgImage="url(/HeroLand.JPG)"
+				bgImage="url(/HeroLandWhite.jpg)"
+				_dark={{
+					bgImage: "url(/HeroLand.JPG)",
+				}}
 				bgSize="cover"
 				bgPos="center"
 				bgRepeat="no-repeat"
@@ -18,7 +21,10 @@ export default function LandingHeroSection() {
 				<Box
 					position="absolute"
 					inset={0}
-					bg="rgba(0, 0, 0, 0.6)"
+					bg=""
+					_dark={{
+						bg: "rgba(0, 0, 0, 0.6)",
+					}}
 					zIndex={1}
 				/>
 
@@ -56,7 +62,14 @@ export default function LandingHeroSection() {
 						<NextLink href="/contactUs">
 							<Button
 								size="md"
-								bgColor="purple.800"
+								bg="#E8A63D"
+								_dark={{
+									bg: "purple.800",
+									_hover: {
+										backgroundColor: "purple.700",
+										transform: "translateY(-5px)",
+									},
+								}}
 								my="24px"
 								alignSelf="start"
 								py="2rem"
@@ -65,7 +78,7 @@ export default function LandingHeroSection() {
 								fontSize="4xl"
 								transition={"all 0.3s ease-in-out"}
 								_hover={{
-									backgroundColor: "purple.700",
+									backgroundColor: "#D48A1C",
 									transform: "translateY(-5px)",
 								}}
 							>

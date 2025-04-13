@@ -7,7 +7,7 @@ import { VscAccount } from "react-icons/vsc"
 export default function Company() {
 	return (
 		<>
-			<Box maxW={"100%"} mx={"auto"} w={"100%"} background={"#0D1117"}>
+			<Box maxW={"100%"} mx={"auto"} w={"100%"}>
 				<FullWidthSection>
 					<CommonHeroSection
 						Title="Empowering Global Supply Chains with Excellence"
@@ -37,7 +37,12 @@ export default function Company() {
 							<Box
 								border={"2px solid #D6B673"}
 								m={"24px"}
-								bgColor={"#1A2938"}
+								bgGradient={"to-b"}
+								gradientFrom={"#F7F5EF"}
+								gradientTo={"#DCE3EA"}
+								_dark={{
+									bg: "#1A2938",
+								}}
 								borderRadius={"2xl"}
 							>
 								<Flex justify={"space-between"} gapX={"64px"}>
@@ -77,7 +82,12 @@ export default function Company() {
 							<Box
 								border={"2px solid #D6B673"}
 								m={"24px"}
-								bgColor={"#1A2938"}
+								bgGradient={"to-b"}
+								gradientFrom={"#F7F5EF"}
+								gradientTo={"#DCE3EA"}
+								_dark={{
+									bg: "#1A2938",
+								}}
 								borderRadius={"2xl"}
 							>
 								<Flex justify={"space-between"} gapX={"64px"}>
@@ -119,7 +129,12 @@ export default function Company() {
 							<Box
 								border={"2px solid #D6B673"}
 								m={"24px"}
-								bgColor={"#1A2938"}
+								bgGradient={"to-b"}
+								gradientFrom={"#F7F5EF"}
+								gradientTo={"#DCE3EA"}
+								_dark={{
+									bg: "#1A2938",
+								}}
 								borderRadius={"2xl"}
 							>
 								<Flex justify={"space-between"} gapX={"64px"}>

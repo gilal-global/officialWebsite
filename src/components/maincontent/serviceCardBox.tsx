@@ -14,7 +14,8 @@ export const ServiceCard = ({
 	items,
 }: ServiceCardBoxProps) => (
 	<Flex
-		bgColor="#1F2630"
+		bgColor="#F3F3ED"
+		_dark={{ bg: "#1F2630" }}
 		border="3px solid #3A3979"
 		borderRadius="40px"
 		minH="500px"

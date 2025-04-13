@@ -5,6 +5,7 @@ import NavBar from "@/components/navBar"
 import { Noto_Sans_TC, Noto_Serif_TC } from "next/font/google"
 import "./globals.css"
 import Footer from "@/components/footer"
+import { Box } from "@chakra-ui/react"
 
 const notoSans = Noto_Sans_TC({
 	subsets: ["latin"],
@@ -45,9 +46,11 @@ export default function RootLayout({
 				className={` ${notoSans.variable} ${notoSerif.variable} ${geistSans.variable} ${geistMono.variable} antialiased`}
 			>
 				<Provider>
-					<NavBar />
-					{children}
-					<Footer />
+					<Box minH="100vh" bg="bg.page" color="text.main">
+						<NavBar />
+						{children}
+						<Footer />
+					</Box>
 				</Provider>
 			</body>
 		</html>
