@@ -42,21 +42,21 @@ export default function NavBar() {
 					fontFamily="var(--font-noto-sans-tc)"
 				>
 					<HStack align={"center"}>
-						<Image
-							src={logoBgImage}
-							alt="logo"
-							w={"px"}
-							h={"100px"}
-							mr={{ base: 0, md: "1rem" }}
-						/>
 						<Link
 							href="/"
 							title="回首頁"
 							as={NextLink}
 							fontFamily={"var(--font-noto-sans-tc)"}
-							mt={{ base: "-5px", md: "-10px" }}
-							ml={{ base: "-5px", md: "-10px" }}
 						>
+							<Image
+								src={logoBgImage}
+								alt="logo"
+								w={"px"}
+								h={"100px"}
+								mr={{ base: 0, md: "1rem" }}
+								mt={{ base: "5px", md: "10px" }}
+								ml={{ base: "2px", md: "7px" }}
+							/>
 							堅美國際
 						</Link>
 					</HStack>

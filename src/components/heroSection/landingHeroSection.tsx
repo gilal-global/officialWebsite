@@ -21,7 +21,10 @@ export default function LandingHeroSection() {
 				<Box
 					position="absolute"
 					inset={0}
-					bg=""
+					bg={{
+						base: "rgba(255, 255, 255, 0.7)",
+						md: "transparent",
+					}}
 					_dark={{
 						bg: "rgba(0, 0, 0, 0.5)",
 					}}
