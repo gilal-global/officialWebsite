@@ -53,8 +53,7 @@ export default function Services() {
 						direction="column"
 						maxW="1440px"
 						mx="auto"
-						py="24px"
-						px="80px"
+						px={{ base: 8, md: 20 }}
 					>
 						<Center minH="200px">
 							<Heading
@@ -73,9 +72,9 @@ export default function Services() {
 								base: "1fr",
 								md: "repeat(2, 1fr)",
 							}}
-							gap="100px"
+							gap={{ base: 8, md: 16 }}
 							justifyContent="center"
-							p={10}
+							p={{ md: 10 }}
 							minH="500px"
 						>
 							{servicesData.map((s, i) => (

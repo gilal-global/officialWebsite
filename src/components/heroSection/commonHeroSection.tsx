@@ -6,7 +6,7 @@ type CommonHeroSectionProps = {
 }
 
 export default ({ Title, SubTitle }: CommonHeroSectionProps) => (
-	<Box position="relative" w="100%" minH="500px">
+	<Box position="relative" w="100%" minH={{ base: "400px", md: "500px" }}>
 		{/* 內容容器：控制寬度 */}
 		<Box
 			w="100%"
@@ -34,26 +34,28 @@ export default ({ Title, SubTitle }: CommonHeroSectionProps) => (
 				zIndex={2}
 				direction={{ base: "column", md: "row" }}
 				px={{ base: 4, md: "108px" }}
-				py="36px"
-				minH="500px"
+				py={{ base: 4, md: 9 }}
+				minH={{ base: "400px", md: "500px" }}
 			>
 				<Flex
 					direction="column"
-					gap={16}
+					gap={{ base: 4, md: 8 }}
+					mt={{ base: 4, md: 8 }}
 					w={{ base: "100%", md: "100%" }}
-					px={{ base: "160px", md: "160px" }}
+					px={{ md: "160px" }}
 				>
 					<Box
 						maxW={{ base: "100%", xl: "1280px", "2xl": "1280px" }}
 						mx={{ base: "0", xl: "auto", "2xl": "auto" }}
 					>
 						<Heading
-							fontSize="5xl"
+							fontSize={{ base: "4xl", md: "5xl" }}
 							lineHeight="1.2"
-							letterSpacing="tight"
-							my={12}
+							letterSpacing={{ md: "tight" }}
+							my={{ base: 8, md: 12 }}
 							fontFamily="var(--font-noto-sans-tc)"
 							userSelect={"none"}
+							textAlign={{ base: "center", md: "start" }}
 							textShadow="0px 0px 10px rgba(0, 0, 0, 0.5)"
 						>
 							{Title}

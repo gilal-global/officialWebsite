@@ -10,6 +10,7 @@ import {
 	NativeSelect,
 	Textarea,
 	Button,
+	Stack,
 } from "@chakra-ui/react"
 
 import { COUNTRIES } from "@/app/contactUs/countries"
@@ -44,7 +45,11 @@ const contactUsForm = () => {
 		>
 			<Fieldset.Root size="lg" w="100%" display="block">
 				<Fieldset.Content w="100%">
-					<HStack gap={4} w="100%">
+					<Stack
+						gap={4}
+						w="100%"
+						direction={{ base: "column", md: "row" }}
+					>
 						<Field.Root>
 							<Field.Label fontSize="2xl" my={2}>
 								名稱
@@ -84,8 +89,12 @@ const contactUsForm = () => {
 								bg="gray.50"
 							/>
 						</Field.Root>
-					</HStack>
-					<HStack gap={4} w="100%">
+					</Stack>
+					<Stack
+						gap={4}
+						w="100%"
+						direction={{ base: "column", md: "row" }}
+					>
 						<Field.Root>
 							<Field.Label fontSize="2xl" my={2}>
 								信箱
@@ -144,9 +153,9 @@ const contactUsForm = () => {
 								<NativeSelect.Indicator />
 							</NativeSelect.Root>
 						</Field.Root>
-					</HStack>
+					</Stack>
 
-					<HStack gap={4} w="100%">
+					<Stack gap={4} w="100%">
 						<Field.Root>
 							<Field.Label fontSize="2xl" my={2}>
 								主旨
@@ -167,9 +176,9 @@ const contactUsForm = () => {
 							/>
 						</Field.Root>
 						<Field.Root></Field.Root>
-					</HStack>
+					</Stack>
 
-					<HStack gap={4} w="100%">
+					<Stack gap={4} w="100%">
 						<Field.Root>
 							<Field.Label fontSize="2xl" my={2}>
 								訊息
@@ -187,11 +196,11 @@ const contactUsForm = () => {
 									bg: "whiteAlpha.100",
 								}}
 								bg="gray.50"
-								minH={"200px"}
+								minH={{ base: "100px", md: "200px" }}
 							/>
 						</Field.Root>
-					</HStack>
-					<HStack justify={"center"} mt={4}>
+					</Stack>
+					<Stack justify={"center"} mt={4}>
 						<Button
 							bg={"blue.400"}
 							border={"2px solid blue.400"}
@@ -215,7 +224,7 @@ const contactUsForm = () => {
 						>
 							送出
 						</Button>
-					</HStack>
+					</Stack>
 				</Fieldset.Content>
 			</Fieldset.Root>
 		</Box>

@@ -19,7 +19,7 @@ export const ServiceCard = ({
 		border="3px solid #3A3979"
 		borderRadius="40px"
 		minH="500px"
-		minW="500px"
+		minW={{ base: "100%", md: "500px" }}
 		direction="column"
 		align="center"
 	>

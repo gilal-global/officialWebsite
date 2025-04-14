@@ -1,5 +1,14 @@
-import { Box, Text, Heading, Icon, Image, Flex } from "@chakra-ui/react"
+import {
+	Box,
+	Text,
+	Heading,
+	Icon,
+	Image,
+	Flex,
+	IconButton,
+} from "@chakra-ui/react"
 import { ReactNode } from "react"
+import { LuMenu } from "react-icons/lu"
 
 type CardBoxProps = {
 	title: string

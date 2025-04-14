@@ -16,21 +16,20 @@ export default function Company() {
 				</FullWidthSection>
 				<ContainerSection>
 					<Box
-						maxW={"1440px"}
-						mx={"auto"}
-						w={"100%"}
-						// border={"1px solid red"}
 						px={{ base: "12px", md: "24px" }}
-						py={{ base: "64px", md: "80px" }}
+						py={{ base: 8, md: 10 }}
 					>
 						<VStack spaceY={6}>
 							<Box
 								// border={"1px solid blue"}
 								w={"100%"}
-								p={"12px"}
-								mx={"24px"}
+								m={"24px"}
 							>
-								<Text fontSize={"4rem"} textAlign={"center"}>
+								<Text
+									fontSize={"4rem"}
+									textAlign={"center"}
+									fontFamily={"var(--font-noto-sans-tc)"}
+								>
 									公司介紹
 								</Text>
 							</Box>
@@ -45,25 +44,51 @@ export default function Company() {
 								}}
 								borderRadius={"2xl"}
 							>
-								<Flex justify={"space-between"} gapX={"64px"}>
+								<Flex
+									direction={{ base: "column", md: "row" }}
+									justify={"space-between"}
+									gapX={"64px"}
+								>
 									<Image
 										borderLeftRadius={15}
 										src="/company-1.jpg"
 										w={"528px"}
 									></Image>
-									<VStack spaceY={4} px={6} py={6}>
+									<VStack
+										spaceY={4}
+										px={6}
+										py={6}
+										justify={"center"}
+									>
 										<Text
 											fontSize={"3rem"}
-											textAlign={"left"}
+											textAlign={{
+												base: "center",
+												md: "left",
+											}}
 											w={"100%"}
 											fontFamily="var(--font-noto-sans-tc)"
 										>
 											專業背景
 										</Text>
 										<Text
-											fontSize={"1.5rem"}
-											p={"24px"}
+											fontSize={{
+												base: "lg",
+												md: "1.5rem",
+											}}
+											lineHeight={{
+												base: "1.6",
+												md: "1.5",
+											}}
+											p={{
+												base: "1rem",
+												md: "1.5rem",
+											}}
 											fontFamily="var(--font-noto-serif-tc)"
+											textAlign={{
+												base: "left",
+												md: "justify",
+											}}
 										>
 											學歷：畢業於澳洲 Monash
 											University，擁有創業碩士學位（Master
@@ -90,22 +115,57 @@ export default function Company() {
 								}}
 								borderRadius={"2xl"}
 							>
-								<Flex justify={"space-between"} gapX={"64px"}>
-									<VStack spaceY={4} px={6} py={6}>
+								<Flex
+									direction={{ base: "column", md: "row" }}
+									justify={"space-between"}
+									gapX={"64px"}
+								>
+									<Image
+										src="/company-2.jpg"
+										w={"617px"}
+										h={{ base: "2xs", md: "500px" }}
+										bgAttachment={"fixed"}
+										borderRightRadius={{ base: 0, md: 15 }}
+										borderTopRadius={{ base: 15, md: 0 }}
+										order={{ base: 1, md: 2 }}
+									></Image>
+									<VStack
+										spaceY={4}
+										px={6}
+										py={6}
+										order={{ base: 2, md: 1 }}
+									>
 										<Text
 											fontSize={"3rem"}
-											textAlign={"left"}
+											textAlign={{
+												base: "center",
+												md: "left",
+											}}
 											w={"100%"}
+											fontFamily="var(--font-noto-sans-tc)"
 											pt={"24px"}
 											pl={"24px"}
-											fontFamily="var(--font-noto-sans-tc)"
 										>
 											使命與願景
 										</Text>
 										<Box
-											fontSize={"1.5rem"}
-											p={"24px"}
+											fontSize={{
+												base: "lg",
+												md: "1.5rem",
+											}}
+											lineHeight={{
+												base: "1.6",
+												md: "1.5",
+											}}
+											p={{
+												base: "1rem",
+												md: "1.5rem",
+											}}
 											fontFamily="var(--font-noto-serif-tc)"
+											textAlign={{
+												base: "left",
+												md: "justify",
+											}}
 										>
 											<li
 												style={{ marginBottom: "24px" }}
@@ -117,13 +177,6 @@ export default function Company() {
 											</li>
 										</Box>
 									</VStack>
-									<Image
-										src="/company-2.jpg"
-										w={"617px"}
-										h={"500px"}
-										bgAttachment={"fixed"}
-										borderRightRadius={15}
-									></Image>
 								</Flex>
 							</Box>
 							<Box
@@ -137,7 +190,11 @@ export default function Company() {
 								}}
 								borderRadius={"2xl"}
 							>
-								<Flex justify={"space-between"} gapX={"64px"}>
+								<Flex
+									direction={{ base: "column", md: "row" }}
+									justify={"space-between"}
+									gapX={"64px"}
+								>
 									<Image
 										borderLeftRadius={15}
 										src="/company-3.jpg"
@@ -146,16 +203,33 @@ export default function Company() {
 									<VStack spaceY={4} px={6} py={6}>
 										<Text
 											fontSize={"3rem"}
-											textAlign={"left"}
+											textAlign={{
+												base: "center",
+												md: "left",
+											}}
 											w={"100%"}
 											fontFamily="var(--font-noto-sans-tc)"
 										>
 											核心價值
 										</Text>
 										<Box
-											fontSize={"1.5rem"}
-											p={"24px"}
+											fontSize={{
+												base: "lg",
+												md: "1.5rem",
+											}}
+											lineHeight={{
+												base: "1.6",
+												md: "1.5",
+											}}
+											p={{
+												base: "1rem",
+												md: "1.5rem",
+											}}
 											fontFamily="var(--font-noto-serif-tc)"
+											textAlign={{
+												base: "left",
+												md: "justify",
+											}}
 										>
 											<li
 												style={{ marginBottom: "24px" }}

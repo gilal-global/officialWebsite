@@ -10,6 +10,7 @@ import {
 	VStack,
 	Text,
 	StackSeparator,
+	Stack,
 } from "@chakra-ui/react"
 import { wrap } from "module"
 
@@ -59,133 +60,137 @@ export default function Home() {
 					</Box>
 				</FullWidthSection>
 				<ContainerSection>
-					<Box px={{ base: 4, md: 8 }} py={16}>
-						<VStack
-							gap={20}
+					<Box px={{ base: 4, md: 8 }} py={{ base: 8, md: 12 }}>
+						<Stack
+							direction={{ base: "column" }}
+							gap={{ base: 8, md: 16 }}
 							separator={
 								<StackSeparator
 									borderColor={"border.divider"}
 								/>
 							}
 						>
-							<Box
+							<Flex
 								w={"100%"}
 								minH={"300px"}
-								display={"flex"}
-								gap={"84px"}
-								p={16}
+								direction={{ base: "column", md: "row" }}
+								p={{ base: 0, md: 16 }}
+								gap={{ base: 0, md: 8 }}
 							>
 								<Image
 									src="/Ship1.jpg"
-									w={"500px"}
-									h={"500px"}
+									w={{ base: "100%", md: "500px" }}
 									borderRadius={30}
+									h={{ base: "300px", md: "auto" }}
 									draggable="false"
+									objectFit={"cover"}
 								></Image>
 								<Flex
-									direction={"column"}
-									gap={"24px"}
+									direction={{ base: "column", md: "column" }}
+									gap={{ base: 0, md: 8 }}
 									flex={1}
 									justifyContent={"center"}
 								>
 									<Text
-										fontSize={"3xl"}
+										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										使命：以專業的供應鏈管理解決方案，幫助客戶快速啟動並優化運營，實現高效交付與成本控制。
 									</Text>
 									<Text
-										fontSize={"3xl"}
+										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										願景：成為國際市場領先的供應鏈管理與項目協調服務品牌，特別是在亞洲市場建立卓越聲譽。
 									</Text>
 								</Flex>
-							</Box>
-							<Box
+							</Flex>
+							<Flex
 								w={"100%"}
 								minH={"300px"}
-								display={"flex"}
-								gap={"84px"}
-								p={16}
+								direction={{ base: "column", md: "row" }}
+								p={{ base: 0, md: 16 }}
+								gap={{ base: 0, md: 8 }}
 							>
+								<Image
+									src="/light-trails-buildings.jpg"
+									w={{ base: "100%", md: "500px" }}
+									borderRadius={30}
+									h={{ base: "300px", md: "auto" }}
+									draggable="false"
+									objectFit={"cover"}
+									order={{ base: 0, md: 1 }}
+								></Image>
 								<Flex
 									direction={"column"}
 									gap={"24px"}
 									flex={1}
 									justifyContent={"center"}
+									order={{ base: 1, md: 0 }}
 								>
 									<Text
-										fontSize={"3xl"}
+										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										協助客戶篩選可靠供應商並建立多樣化網絡以降低風險，通過談判策略和公平合同爭取最佳條件並簡化管理，從訂單到交付全程跟踪進度並解決問題以確保按時完成，同時提供質量檢測、物流管理和售後支持等增值服務提升滿意度。{" "}
 									</Text>
 								</Flex>
-								<Image
-									src="/light-trails-buildings.jpg"
-									w={"500px"}
-									h={"500px"}
-									borderRadius={30}
-									draggable="false"
-								></Image>
-							</Box>
-							<Box
+							</Flex>
+							<Flex
 								w={"100%"}
 								minH={"300px"}
-								display={"flex"}
-								gap={"84px"}
-								p={16}
+								direction={{ base: "column", md: "row" }}
+								p={{ base: 0, md: 16 }}
+								gap={{ base: 0, md: 8 }}
 							>
 								<Image
 									src="/landcard3.jpeg"
-									backgroundSize={"cover"}
-									backgroundPosition={"center"}
-									w={"500px"}
-									h={"600px"}
+									w={{ base: "100%", md: "500px" }}
 									borderRadius={30}
+									h={{ base: "300px", md: "auto" }}
 									draggable="false"
+									objectFit={"cover"}
 								></Image>
 								<Flex
 									direction={"column"}
-									gap={"24px"}
+									gap={{ base: 0, md: 8 }}
 									flex={1}
 									justifyContent={"center"}
 								>
 									<Text
-										fontSize={"3xl"}
+										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										1.雙語與跨文化支持：幫助國際企業克服語言及文化障礙
 									</Text>
 									<Text
-										fontSize={"3xl"}
+										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										2.高性價比的定制化服務：適合中小企業與初創公司，靈活滿足客戶需求
 									</Text>
 									<Text
-										fontSize={"3xl"}
+										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										3.增值服務全面：涵蓋質檢、物流協調、售後支持，提供全流程解決方案
 									</Text>
 									<Text
-										fontSize={"3xl"}
+										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										4.專注亞洲市場：為希望進入中國、越南等亞洲市場的企業提供深入支持
 									</Text>
 								</Flex>
-							</Box>
-						</VStack>
+							</Flex>
+						</Stack>
 					</Box>
 				</ContainerSection>
 			</Box>

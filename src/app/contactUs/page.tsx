@@ -37,7 +37,7 @@ const contactUs = () => {
 							<br></br>
 							<br></br>
 							📩 歡迎聯繫我們，討論您的國際化計畫！<br></br> ✉️
-							info@gilail.com | 📞 +886-0911-388-897
+							info@gilail.com | 📞 +886-911-388-897
 						</Text>
 					</Box>
 					<ContactUsForm></ContactUsForm>
