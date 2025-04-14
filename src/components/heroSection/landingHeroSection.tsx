@@ -34,13 +34,14 @@ export default function LandingHeroSection() {
 					zIndex={2}
 					direction={{ base: "column", md: "row" }}
 					px={{ base: 4, md: "108px" }}
-					py="36px"
+					py={{ base: 6, md: "36px" }}
 					minH="600px"
 				>
 					<Flex
 						direction="column"
 						gap={4}
 						w={{ base: "100%", md: "50%" }}
+						align={{ base: "center", md: "start" }}
 					>
 						<Heading
 							fontSize="5xl"
@@ -49,6 +50,7 @@ export default function LandingHeroSection() {
 							my={12}
 							fontFamily="var(--font-noto-sans-tc)"
 							userSelect={"none"}
+							textAlign={{ base: "center", md: "start" }}
 						>
 							供應到人才:全面進化的顧問夥伴
 						</Heading>
@@ -56,6 +58,7 @@ export default function LandingHeroSection() {
 							fontSize="2xl"
 							fontFamily="var(--font-noto-serif-tc)"
 							userSelect={"none"}
+							textAlign={{ base: "center", md: "start" }}
 						>
 							我們整合供應鏈與人力資源兩大核心，提供一站式專業顧問服務，協助企業提升效率、強化競爭力，實現全面升級。
 						</Text>
