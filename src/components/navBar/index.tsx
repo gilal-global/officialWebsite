@@ -63,14 +63,15 @@ export default function NavBar() {
 				</Box>
 
 				{/* 手機Nav */}
-				<Flex alignItems={"center"} px={4}>
-					<IconButton
-						size={"2xl"}
-						display={{ base: "inline-flex", md: "none" }}
-						onClick={onToggle}
-					>
+				<Flex
+					alignItems={"center"}
+					px={4}
+					display={{ base: "inline-flex", md: "none" }}
+				>
+					<IconButton size={"2xl"} onClick={onToggle}>
 						{open ? <LuX /> : <LuMenu />}
 					</IconButton>
+					<ColorModeButton />
 				</Flex>
 
 				{/* 電腦Nav */}
