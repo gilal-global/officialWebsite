@@ -138,7 +138,6 @@ const contactUsForm = () => {
 									_focus={{
 										outline: "none",
 										borderColor: "blue.300",
-										color: "whiteAlpha.900",
 									}}
 								>
 									{COUNTRIES.map((country) => (
@@ -200,8 +199,9 @@ const contactUsForm = () => {
 							/>
 						</Field.Root>
 					</Stack>
-					<Stack justify={"center"} mt={4}>
+					<Stack justify={"center"} mt={4} mx={"auto"}>
 						<Button
+							w="auto"
 							bg={"blue.400"}
 							border={"2px solid blue.400"}
 							_dark={{

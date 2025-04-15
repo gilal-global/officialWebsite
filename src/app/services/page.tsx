@@ -82,7 +82,7 @@ export default function Services() {
 							))}
 						</Grid>
 
-						<Flex justify="center" mt={8}>
+						<Flex justify="center" my={8}>
 							<NextLink href="/contactUs" passHref>
 								<Button
 									height="60px"
