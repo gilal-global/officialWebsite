@@ -36,6 +36,9 @@ const geistMono = localFont({
 export const metadata: Metadata = {
 	title: "堅美國際",
 	description: "國際貿易與供應鏈整合顧問公司",
+	icons: {
+		icon: "/favicon.ico",
+	},
 }
 
 export default function RootLayout({
