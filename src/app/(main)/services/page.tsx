@@ -9,7 +9,7 @@ import {
 	Button,
 	Link,
 } from "@chakra-ui/react"
-import { servicesData } from "@/app/services/ServicesData"
+import { servicesData } from "@/app/(main)/services/ServicesData"
 import CommonHeroSection from "@/components/heroSection/commonHeroSection"
 import { FullWidthSection } from "@/components/maincontent/fullWidthSection"
 import { ServiceCard } from "@/components/maincontent/serviceCardBox"
@@ -87,14 +87,14 @@ export default function Services() {
 								<Button
 									height="60px"
 									minW="200px"
-									bg="blue.400"
+									bg="#E1C16E"
 									color="white"
 									px={8}
 									py={6}
 									borderRadius="full"
 									fontSize="1.5rem"
 									_hover={{
-										bg: "blue.500",
+										bg: "#D0B057",
 										transform: "scale(1.05)",
 									}}
 									boxShadow="md"

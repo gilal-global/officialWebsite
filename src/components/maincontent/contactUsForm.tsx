@@ -13,10 +13,10 @@ import {
 	Stack,
 } from "@chakra-ui/react"
 
-import { COUNTRIES } from "@/app/contactUs/countries"
+import { COUNTRIES } from "@/app/(main)/contactUs/countries"
 import { useState } from "react"
 
-const contactUsForm = () => {
+const ContactUsForm = () => {
 	const [firstName, setFirstName] = useState("")
 	const [lastName, setLastName] = useState("")
 	const [email, setEmail] = useState("")
@@ -202,8 +202,7 @@ const contactUsForm = () => {
 					<Stack justify={"center"} mt={4} mx={"auto"}>
 						<Button
 							w="auto"
-							bg={"blue.400"}
-							border={"2px solid blue.400"}
+							bg={"#E1C16E"}
 							_dark={{
 								bg: "#3C3AB4",
 								borderColor: "#3C3AB4",
@@ -216,7 +215,7 @@ const contactUsForm = () => {
 							size={"lg"}
 							p={4}
 							_hover={{
-								bg: "blue.500",
+								bg: "#D0B057",
 								transform: "scale(1.05)",
 							}}
 							boxShadow="md"
@@ -231,4 +230,4 @@ const contactUsForm = () => {
 	)
 }
 
-export default contactUsForm
+export default ContactUsForm
