@@ -25,12 +25,13 @@ const ContactUsForm = () => {
 	const [country, setCountry] = useState("")
 	const [details, setDetails] = useState("")
 	const [subject, setSubject] = useState("")
+	const clean = (s: string) => s.trim().replace(/\r?\n|\s/g, "")
 
 	useEffect(() => {
 		axios.get("https://gilal-global.com/api/user-location").then((res) => {
+			console.log("abc", res.data, res.status)
 			if (res.status === 200) {
-				console.log(res.data)
-				setCountry(res.data)
+				setCountry(clean(res.data))
 			} else {
 				setCountry("Taiwan")
 			}
