@@ -27,7 +27,7 @@ const ContactUsForm = () => {
 	const [subject, setSubject] = useState("")
 
 	useEffect(() => {
-		axios.get("http://localhost:4000/api/user-location").then((res) => {
+		axios.get("https://localhost:4000/api/user-location").then((res) => {
 			if (res.status === 200) {
 				setCountry(res.data)
 			} else {
