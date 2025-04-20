@@ -29,6 +29,7 @@ const ContactUsForm = () => {
 	useEffect(() => {
 		axios.get("https://gilal-global.com/api/user-location").then((res) => {
 			if (res.status === 200) {
+				console.log(res.data)
 				setCountry(res.data)
 			} else {
 				setCountry("Taiwan")
