@@ -54,7 +54,7 @@ const ContactUsForm = () => {
 		)
 		try {
 			const res = await axios.post(
-				"http://gilal-global.com/api/send-email",
+				"https://gilal-global.com/api/send-email",
 				payload
 			)
 			if (res.status === 200) {
