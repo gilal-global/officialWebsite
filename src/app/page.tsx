@@ -92,8 +92,8 @@ export default function Home() {
 						alt="HeroImg"
 					></Image>
 				</Box>
-				<ContainerSection>
-					<Box w={"100%"} bg={"#DADADA"}>
+				<FullWidthSection>
+					<Box w={"100%"} bg={"#DADADA"} _dark={{ bg: "#1E2632D9" }}>
 						<Flex
 							gap={"10vw"}
 							justify={"center"}
@@ -107,7 +107,7 @@ export default function Home() {
 							))}
 						</Flex>
 					</Box>
-				</ContainerSection>
+				</FullWidthSection>
 				<ContainerSection>
 					<Box px={{ base: 4, md: 8 }} py={{ base: 8, md: 12 }}>
 						<Stack
