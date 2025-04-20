@@ -7,7 +7,7 @@
 		"build": "next build",
 		"start": "next start -p 8080",
 		"lint": "next lint",
-		"pm2": "pm2 start npm --name \"gilailweb\" -- start",
+		"pm2": "pm2 start 0",
 		"deploy": "pnpm build && pnpm pm2"
 	},
 	"dependencies": {
