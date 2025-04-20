@@ -27,7 +27,7 @@ const ContactUsForm = () => {
 	const [subject, setSubject] = useState("")
 
 	useEffect(() => {
-		axios.get("https://localhost:4000/api/user-location").then((res) => {
+		axios.get("https://gilal-global.com/api/user-location").then((res) => {
 			if (res.status === 200) {
 				setCountry(res.data)
 			} else {
@@ -54,7 +54,7 @@ const ContactUsForm = () => {
 		)
 		try {
 			const res = await axios.post(
-				"http://localhost:3133/api/send-email",
+				"http://gilal-global.com/api/send-email",
 				payload
 			)
 			if (res.status === 200) {
