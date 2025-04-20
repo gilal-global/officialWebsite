@@ -14,7 +14,9 @@ import {
 } from "@chakra-ui/react"
 
 import { COUNTRIES } from "@/app/(main)/contactUs/countries"
-import { useState } from "react"
+import { useEffect, useState } from "react"
+import { SiAxios } from "react-icons/si"
+import axios from "axios"
 
 const ContactUsForm = () => {
 	const [firstName, setFirstName] = useState("")
@@ -24,8 +26,46 @@ const ContactUsForm = () => {
 	const [details, setDetails] = useState("")
 	const [subject, setSubject] = useState("")
 
-	const handleSubmit = (e: React.FormEvent) => {
+	useEffect(() => {
+		axios.get("http://localhost:3133/api/user-location").then((res) => {
+			if (res.status === 200) {
+				console.log("Taiwan")
+				setCountry("Taiwan")
+			} else {
+				setCountry("Taiwan")
+			}
+		})
+	}, [])
+
+	const handleSubmit = async (e: React.FormEvent) => {
 		e.preventDefault()
+		const fullName = `${firstName} ${lastName}`
+		const payload = {
+			fullName,
+			email,
+			country,
+			subject,
+			details,
+		}
+
+		alert(
+			Object.entries(payload)
+				.map(([key, value]) => `${key}: ${value}`)
+				.join("\n")
+		)
+		try {
+			const res = await axios.post(
+				"http://localhost:3133/api/send-email",
+				payload
+			)
+			if (res.status === 200) {
+				alert("Email sent successfully")
+			}
+		} catch (err) {
+			if (err instanceof Error) {
+				alert(err.message)
+			}
+		}
 	}
 
 	return (
@@ -135,6 +175,8 @@ const ContactUsForm = () => {
 									px={4}
 									fontSize="md"
 									color={"black.400"}
+									onChange={(e) => setCountry(e.target.value)}
+									value={country}
 									_focus={{
 										outline: "none",
 										borderColor: "blue.300",
@@ -143,7 +185,7 @@ const ContactUsForm = () => {
 									{COUNTRIES.map((country) => (
 										<option
 											key={country.value}
-											value={country.value}
+											value={country.title}
 										>
 											{country.title}
 										</option>
@@ -161,7 +203,7 @@ const ContactUsForm = () => {
 							</Field.Label>
 							<Input
 								value={subject}
-								onChange={(e) => setEmail(e.target.value)}
+								onChange={(e) => setSubject(e.target.value)}
 								px={4}
 								placeholder="Subject"
 								variant="outline"
@@ -184,7 +226,7 @@ const ContactUsForm = () => {
 							</Field.Label>
 							<Textarea
 								value={details}
-								onChange={(e) => setEmail(e.target.value)}
+								onChange={(e) => setDetails(e.target.value)}
 								px={4}
 								placeholder="Details"
 								variant="outline"
@@ -220,6 +262,7 @@ const ContactUsForm = () => {
 							}}
 							boxShadow="md"
 							minW={"100px"}
+							type="submit"
 						>
 							送出
 						</Button>
