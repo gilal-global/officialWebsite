@@ -49,11 +49,6 @@ const ContactUsForm = () => {
 			details,
 		}
 
-		alert(
-			Object.entries(payload)
-				.map(([key, value]) => `${key}: ${value}`)
-				.join("\n")
-		)
 		try {
 			const res = await axios.post(
 				"https://gilal-global.com/api/send-email",
@@ -61,6 +56,12 @@ const ContactUsForm = () => {
 			)
 			if (res.status === 200) {
 				alert("Email sent successfully")
+				setCountry("")
+				setDetails("")
+				setEmail("")
+				setFirstName("")
+				setLastName("")
+				setSubject("")
 			}
 		} catch (err) {
 			if (err instanceof Error) {
