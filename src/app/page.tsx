@@ -1,4 +1,6 @@
+import Footer from "@/components/footer"
 import LandingHeroSection from "@/components/heroSection/landingHeroSection"
+import LandingNavBar from "@/components/landingNavBar"
 import { CardBox } from "@/components/maincontent/cardbox"
 import ContainerSection from "@/components/maincontent/containerSection"
 import { FullWidthSection } from "@/components/maincontent/fullWidthSection"
@@ -11,6 +13,7 @@ import {
 	Text,
 	StackSeparator,
 	Stack,
+	Heading,
 } from "@chakra-ui/react"
 import { wrap } from "module"
 
@@ -42,9 +45,55 @@ export default function Home() {
 	return (
 		<>
 			<Box maxW={"100%"} mx={"auto"} w={"100%"}>
-				<LandingHeroSection></LandingHeroSection>
-				<FullWidthSection>
-					<Box w={"100%"} bg={"bg.card"}>
+				<LandingNavBar />
+				<Box>
+					<Heading
+						fontSize="5xl"
+						lineHeight="1.2"
+						letterSpacing="tight"
+						my={12}
+						fontFamily="var(--font-noto-sans-tc)"
+						userSelect={"none"}
+						textAlign={{ base: "center", md: "center" }}
+					>
+						供應到人才:全面進化的顧問夥伴
+					</Heading>
+					<Text
+						fontSize="2xl"
+						fontFamily="var(--font-noto-serif-tc)"
+						userSelect={"none"}
+						textAlign={{ base: "center", md: "center" }}
+					>
+						我們整合供應鏈與人力資源兩大核心，提供一站式專業顧問服務，協助企業提升效率、強化競爭力，實現全面升級。
+					</Text>
+
+					<Box
+						w="100%"
+						maxW="1440px"
+						mx="auto"
+						bgImage="url(/HeroLandWhite.jpg)"
+						_dark={{
+							bgImage: "url(/HeroLand.JPG)",
+						}}
+						bgSize="cover"
+						bgPos="center"
+						bgRepeat="no-repeat"
+					/>
+
+					<Image
+						src="HeroLandWhite.jpg"
+						w="100%"
+						maxW="1440px"
+						mx="auto"
+						my={12}
+						h={"2xl"}
+						userSelect={"none"}
+						draggable="false"
+						alt="HeroImg"
+					></Image>
+				</Box>
+				<ContainerSection>
+					<Box w={"100%"} bg={"#DADADA"}>
 						<Flex
 							gap={"10vw"}
 							justify={"center"}
@@ -58,7 +107,7 @@ export default function Home() {
 							))}
 						</Flex>
 					</Box>
-				</FullWidthSection>
+				</ContainerSection>
 				<ContainerSection>
 					<Box px={{ base: 4, md: 8 }} py={{ base: 8, md: 12 }}>
 						<Stack
@@ -147,7 +196,7 @@ export default function Home() {
 								gap={{ base: 0, md: 8 }}
 							>
 								<Image
-									src="/landcard3.jpeg"
+									src="/landcard3.jpg"
 									w={{ base: "100%", md: "500px" }}
 									borderRadius={30}
 									h={{ base: "300px", md: "auto" }}
@@ -193,6 +242,8 @@ export default function Home() {
 						</Stack>
 					</Box>
 				</ContainerSection>
+
+				<Footer />
 			</Box>
 		</>
 	)

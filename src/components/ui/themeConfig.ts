@@ -21,13 +21,13 @@ export const themeConfig = defineConfig({
 				},
 				"bg.page": {
 					value: {
-						base: "#F6F7F9", // 淺色背景
+						base: "#DADADA", // 淺色背景
 						_dark: "#0D1117", // 深色背景
 					},
 				},
 				"bg.nav": {
 					value: {
-						base: "#DDE8EF", // 淺色背景
+						base: "#DADADA", // 淺色背景
 						_dark: "#0E1628", // 深色背景
 					},
 				},
@@ -39,7 +39,7 @@ export const themeConfig = defineConfig({
 				},
 				"bg.hero": {
 					value: {
-						base: "#dedede", // 淺色背景
+						base: "#DADADA", // 淺色背景
 						_dark: "#060a0e", // 深色背景
 					},
 				},
@@ -56,7 +56,7 @@ export const themeConfig = defineConfig({
 				},
 				"bg.footer": {
 					value: {
-						base: "#DDE8EF",
+						base: "#E6E6E6",
 						_dark: "#0E1628",
 					},
 				},

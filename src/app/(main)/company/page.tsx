@@ -1,7 +1,7 @@
 import CommonHeroSection from "@/components/heroSection/commonHeroSection"
 import ContainerSection from "@/components/maincontent/containerSection"
 import { FullWidthSection } from "@/components/maincontent/fullWidthSection"
-import { Box, VStack, Text, Flex, Image } from "@chakra-ui/react"
+import { Box, VStack, Text, Flex, Image, SimpleGrid } from "@chakra-ui/react"
 import { VscAccount } from "react-icons/vsc"
 
 export default function Company() {
@@ -24,6 +24,7 @@ export default function Company() {
 								// border={"1px solid blue"}
 								w={"100%"}
 								m={"24px"}
+								userSelect={"none"}
 							>
 								<Text
 									fontSize={"4rem"}
@@ -33,45 +34,59 @@ export default function Company() {
 									公司介紹
 								</Text>
 							</Box>
-							<Box
-								border={"2px solid #D6B673"}
-								m={"24px"}
-								bgGradient={"to-b"}
-								gradientFrom={"#F7F5EF"}
-								gradientTo={"#DCE3EA"}
-								_dark={{
-									bg: "#1A2938",
-								}}
-								borderRadius={"2xl"}
+
+							<SimpleGrid
+								columns={{ base: 1, md: 2 }}
+								spaceX={0}
+								spaceY={0}
+								border="2px solid #D6B673"
+								m="24px"
+								borderRadius="2xl"
+								overflow={"hidden"}
 							>
-								<Flex
-									direction={{ base: "column", md: "row" }}
-									justify={"space-between"}
-									gapX={"64px"}
+								{/* 左邊圖片 */}
+								<Image
+									src="/company-1.jpg"
+									objectFit="cover"
+									w="100%"
+									h="100%"
+									borderLeftRadius={{ md: "2xl" }}
+									borderTopRadius={{ base: "2xl", md: "0" }}
+								/>
+
+								{/* 右邊文字區 */}
+								<VStack
+									spaceX={4}
+									spaceY={4}
+									px={6}
+									py={6}
+									justify="center"
+									align="start"
+									userSelect="none"
+									bgGradient={"to-b"}
+									gradientFrom={"#F7F5EF"}
+									gradientTo={"#DCE3EA"}
 								>
-									<Image
-										borderLeftRadius={15}
-										src="/company-1.jpg"
-										w={"528px"}
-									></Image>
-									<VStack
-										spaceY={4}
-										px={6}
-										py={6}
-										justify={"center"}
+									<Text
+										fontSize="3rem"
+										textAlign={{
+											base: "center",
+											md: "left",
+										}}
+										w="100%"
+										fontFamily="var(--font-noto-sans-tc)"
 									>
+										專業背景
+									</Text>
+
+									{[
+										"我們專注於國際供應鏈管理與全球商業策略，結合國際視野與創業精神，致力於為客戶提供靈活、實用且貼近市場需求的解決方案。",
+										"擁有豐富的實務經驗與跨文化溝通能力，我們曾參與多項國際專案，涵蓋供應商篩選、合同談判及物流協調，能從實戰中為您找到最合適的合作方式。",
+										"我們擅長以中英文雙語或其他語言協助企業消弭語言與文化的隔閡，讓每一場跨國合作都更加順利、自然，也更具效率。",
+										"我們相信，每一段合作，都是一場共創價值的旅程。",
+									].map((text, idx) => (
 										<Text
-											fontSize={"3rem"}
-											textAlign={{
-												base: "center",
-												md: "left",
-											}}
-											w={"100%"}
-											fontFamily="var(--font-noto-sans-tc)"
-										>
-											專業背景
-										</Text>
-										<Text
+											key={idx}
 											fontSize={{
 												base: "lg",
 												md: "1.5rem",
@@ -80,30 +95,19 @@ export default function Company() {
 												base: "1.6",
 												md: "1.5",
 											}}
-											p={{
-												base: "1rem",
-												md: "1.5rem",
-											}}
+											p="1rem"
 											fontFamily="var(--font-noto-serif-tc)"
 											textAlign={{
 												base: "left",
 												md: "justify",
 											}}
 										>
-											學歷：畢業於澳洲 Monash
-											University，擁有創業碩士學位（Master
-											of
-											Entrepreneurship），專注於國際供應鏈管理與全球商業策略。擁有全球視野與創業導向思維，兼具策略規劃能力與豐富的實務操作經驗，能靈活應對多變的國際商業環境。
-											<br></br>
-											<br></br>
-											專業經驗：曾參與多個國際項目，專注於供應商篩選、合同談判及物流協調，積累了豐富的跨文化實踐經驗。
-											<br></br>
-											<br></br>
-											專長：雙語能力（中英文），能高效解決語言障礙，幫助客戶跨越文化差異。
+											{text}
 										</Text>
-									</VStack>
-								</Flex>
-							</Box>
+									))}
+								</VStack>
+							</SimpleGrid>
+
 							<Box
 								border={"2px solid #D6B673"}
 								m={"24px"}

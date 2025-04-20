@@ -1,7 +1,7 @@
 import { Provider } from "@/components/ui/provider"
 import type { Metadata } from "next"
 import localFont from "next/font/local"
-import NavBar from "@/components/navBar"
+import LandingNavBar from "@/components/landingNavBar"
 import { Noto_Sans_TC, Noto_Serif_TC } from "next/font/google"
 import "./globals.css"
 import Footer from "@/components/footer"
@@ -48,9 +48,7 @@ export default function RootLayout({
 			>
 				<Provider>
 					<Box minH="100vh" bg="bg.page" color="text.main">
-						<NavBar />
 						{children}
-						<Footer />
 					</Box>
 				</Provider>
 			</body>
