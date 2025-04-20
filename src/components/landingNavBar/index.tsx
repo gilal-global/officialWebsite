@@ -14,7 +14,7 @@ import { ColorModeButton, useColorModeValue } from "@/components/ui/color-mode"
 import { useEffect, useState } from "react"
 import { LuMenu, LuX } from "react-icons/lu"
 
-export default function NavBar() {
+export default function LandingNavBar() {
 	const [mounted, setMounted] = useState(false)
 	const { open, onOpen, onClose, onToggle } = useDisclosure()
 
@@ -51,9 +51,7 @@ export default function NavBar() {
 							as={NextLink}
 							fontFamily={"var(--font-noto-sans-tc)"}
 							color={"#C5A253"}
-							_dark={{
-								color: "white",
-							}}
+							_dark={{ color: "white" }}
 						>
 							<Image
 								src={logoBgImage}
