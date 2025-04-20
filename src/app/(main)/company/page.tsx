@@ -66,6 +66,9 @@ export default function Company() {
 									bgGradient={"to-b"}
 									gradientFrom={"#F7F5EF"}
 									gradientTo={"#DCE3EA"}
+									_dark={{
+										bg: "#1A2938",
+									}}
 								>
 									<Text
 										fontSize="3rem"

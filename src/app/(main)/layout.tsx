@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import NavBar from "@/components/navBar"
 import Footer from "@/components/footer"
-import { Box } from "@chakra-ui/react"
+import { Box, Flex } from "@chakra-ui/react"
 
 export const metadata: Metadata = {
 	title: "堅美國際 - 主頁",
@@ -12,10 +12,10 @@ export default function MainLayout({
 	children,
 }: Readonly<{ children: React.ReactNode }>) {
 	return (
-		<Box minH="100vh" bg="bg.page" color="text.main">
+		<Flex direction="column" minH="100vh" bg="bg.page" color="text.main">
 			<NavBar />
-			{children}
+			<Box flex="1">{children}</Box>
 			<Footer />
-		</Box>
+		</Flex>
 	)
 }

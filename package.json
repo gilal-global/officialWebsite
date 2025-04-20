@@ -6,12 +6,14 @@
 		"dev": "next dev",
 		"build": "next build",
 		"start": "next start -p 8080",
-		"lint": "next lint"
+		"lint": "next lint",
+		"deploy": "pnpm build && pnpm start"
 	},
 	"dependencies": {
 		"@chakra-ui/react": "^3.15.1",
 		"@emotion/react": "^11.14.0",
 		"@emotion/styled": "^11.14.0",
+		"axios": "^1.8.4",
 		"framer-motion": "^12.6.3",
 		"next": "14.2.27",
 		"next-themes": "^0.4.6",
