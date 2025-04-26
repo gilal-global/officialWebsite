@@ -209,28 +209,28 @@ export default function Home() {
 								>
 									<Text
 										fontSize={{ base: "2xl", md: "3xl" }}
-										p={6}
+										p={2}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										我們致力於成為您拓展國際市場最值得信賴的夥伴，提供靈活且貼近需求的專業服務。透過語言能力與深厚的跨文化溝通經驗，協助企業克服語言與文化障礙，讓跨國合作更順暢。
 									</Text>
 									<Text
 										fontSize={{ base: "2xl", md: "3xl" }}
-										p={6}
+										p={2}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										我們的高性價比定制化方案，特別適合中小企業與初創團隊，能依照不同階段需求彈性調整服務內容。
 									</Text>
 									<Text
 										fontSize={{ base: "2xl", md: "3xl" }}
-										p={6}
+										p={2}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										品質檢驗、物流協調到售後支援，提供完整的一站式解決方案，減輕營運負擔、提升效率。
 									</Text>
 									<Text
 										fontSize={{ base: "2xl", md: "3xl" }}
-										p={6}
+										p={2}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
 										我們對亞洲市場有深入理解，特別擅長協助企業進入台灣、東南亞、歐洲等新興市場，提供在地化的策略與實務支援，助您穩健落地、拓展成長。
