@@ -7,9 +7,7 @@ import { FullWidthSection } from "@/components/maincontent/fullWidthSection"
 import {
 	Box,
 	Flex,
-	Icon,
 	Image,
-	VStack,
 	Text,
 	StackSeparator,
 	Stack,
@@ -214,28 +212,28 @@ export default function Home() {
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
-										1.雙語與跨文化支持：幫助國際企業克服語言及文化障礙
+										我們致力於成為您拓展國際市場最值得信賴的夥伴，提供靈活且貼近需求的專業服務。透過語言能力與深厚的跨文化溝通經驗，協助企業克服語言與文化障礙，讓跨國合作更順暢。
 									</Text>
 									<Text
 										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
-										2.高性價比的定制化服務：適合中小企業與初創公司，靈活滿足客戶需求
+										我們的高性價比定制化方案，特別適合中小企業與初創團隊，能依照不同階段需求彈性調整服務內容。
 									</Text>
 									<Text
 										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
-										3.增值服務全面：涵蓋質檢、物流協調、售後支持，提供全流程解決方案
+										品質檢驗、物流協調到售後支援，提供完整的一站式解決方案，減輕營運負擔、提升效率。
 									</Text>
 									<Text
 										fontSize={{ base: "2xl", md: "3xl" }}
 										p={6}
 										fontFamily={"var(--font-noto-serif-tc)"}
 									>
-										4.專注亞洲市場：為希望進入中國、越南等亞洲市場的企業提供深入支持
+										我們對亞洲市場有深入理解，特別擅長協助企業進入台灣、東南亞、歐洲等新興市場，提供在地化的策略與實務支援，助您穩健落地、拓展成長。
 									</Text>
 								</Flex>
 							</Flex>
