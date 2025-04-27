@@ -1,3 +1,12 @@
+# 堅美國際官方網站
+
+## GCP 正式機
+- 使用Debian，採用pm2進程管理
+- 專案使用 React, Next-js, Chakra-UI 進行開發
+
+---
+
+## 其他
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
